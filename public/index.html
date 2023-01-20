@@ -207,26 +207,7 @@
     </footer>
   </main>
 
-  <script>
-    const menuToggleNav = document.querySelector('.menu-toggle-nav');
-    const menuToggleClose = document.querySelector('.menu-toggle-close');
-    const container = document.querySelector('.main-container');
-    const scrim = document.querySelector('.scrim');
-    const sidebar = document.querySelector('.sidebar');
-
-    menuToggleNav.addEventListener('click', ()=>{
-      container.classList.toggle('hide-overflow')
-      scrim.classList.toggle('is-active');
-      scrim.classList.toggle('no-pointer');
-      sidebar.classList.toggle('is-active');
-    })
-    menuToggleClose.addEventListener('click', ()=>{
-      container.classList.toggle('hide-overflow')
-      scrim.classList.toggle('is-active');
-      scrim.classList.toggle('no-pointer');
-      sidebar.classList.toggle('is-active');
-    })
-  </script>
+  
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
@@ -241,6 +222,30 @@
         prevEl: ".swiper-button-prev"
       }
     });
+  </script>
+  <script>
+    const menuToggleNav = document.querySelector('.menu-toggle-nav');
+    const menuToggleClose = document.querySelector('.menu-toggle-close');
+    const container = document.querySelector('.main-container');
+    const scrim = document.querySelector('.scrim');
+    const sidebar = document.querySelector('.sidebar');
+
+    if(menuToggleNav){
+      menuToggleNav.addEventListener('click', ()=>{
+      container.classList.toggle('hide-overflow')
+      scrim.classList.toggle('is-active');
+      scrim.classList.toggle('no-pointer');
+      sidebar.classList.toggle('is-active');
+    })
+    }
+    if(menuToggleClose){
+      menuToggleClose.addEventListener('click', ()=>{
+      container.classList.toggle('hide-overflow')
+      scrim.classList.toggle('is-active');
+      scrim.classList.toggle('no-pointer');
+      sidebar.classList.toggle('is-active');
+    })
+    }
   </script>
 </body>
 
