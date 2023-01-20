@@ -1,25 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>vanilla html js netlify example</title>
 
-    <link rel="stylesheet" type="text/css" href="index.css" />
-    <script type="text/javascript" src="/script.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Vanilla HTML JS netlify example</h1>
-      <div class="center"><button id="button">Click me</button></div>
-      <pre id="message">
-      Click the button!
-    </pre
-      >
-      <div>
-        <a href="https://github.com/netlify-labs/vanilla-html-js-example">View source</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>vanilla html js netlify example</title>
+  <link rel='stylesheet' href='./styles/styles.scss' />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script type='text/javascript' src='./script.js'></script>
+</head>
+
+<body>
+  <div class="scrim no-pointer">
+    <aside class="sidebar">
+      <button class="close-btn menu-toggle-close">Close</button>
+      <h3>Selected Credits</h3>
+      <ul class="credits-all">
+        <li class="year-group">
+          <div class="year">
+            2016
+          </div>
+          <ul>
+            <li class="title">
+              WARRIORS, documentary on Native Warrior spirit, director/dp, in production
+            </li>
+            <li class="title">
+              MEMWARS, Terry Allen art exhibit video content, dp/editor
+            </li>
+          </ul>
+        </li>
+        <li class="year-group">
+          <div class="year">
+            2015
+          </div>
+          <ul>
+            <li class="title">
+              EVERYWHERE IS A GILA, Sierra Club Rio Grande Chapter, dp/editor            </li>
+            <li class="title">
+              GAME ON, short, dp/editor
+            </li>
+            <li class="title">
+              ZYDECO BREAKFAST, documentary on Zydeco music, editor
+            </li>
+          </ul>
+        </li>
+        <li class="year-group">
+          <div class="year">
+            2014
+          </div>
+          <ul>
+            <li class="title">
+              A THOUSAND VOICES, documentary on NM Native Women, dp/editor
+            </li>
+          </ul>
+        </li>
+        <li class="year-group">
+          <div class="year">
+            2013
+          </div>
+          <ul>
+            <li class="title">
+              A&E LONGMIRE, promotions, dp
+            </li>
+            <li class="title">
+              SHE SINGS TO THE STARS, feature, editor
+            </li>
+          </ul>
+        </li>
+        <li class="year-group">
+          <div class="year">
+            2012
+          </div>
+          <ul>
+            <li class="title">
+              CANES OF POWER, documentary on Pueblo Canes, dp/editor
+            </li>
+            <li class="title">
+              ZOMBIEWOOD, short, editor
+            </li>
+          </ul>
+        </li>
+        <li class="year-group">
+          <div class="year">
+            2011
+          </div>
+          <ul>
+            <li class="title">
+              20 WAYS, comedy short, editor
+            </li>
+            <li class="title">
+              ANCIENT PATHWAYS, documentary on Pueblo leadership, dp/editor
+            </li>
+            <li class="title">
+              NEW MEXICO SCHOOL OF THE ARTS, promo, dp
+            </li>
+            <li class="title">
+              ACLU OF NM, promo, editor
+            </li>
+          </ul>
+        </li>
+        <li class="year-group">
+          <div class="year">
+            2010
+          </div>
+          <ul>
+            <li class="title">
+              ONE AMONG THOUSANDS, documentary on Cuban-American musician, editor
+            </li>
+            <li class="title">
+              MOMO, Terry Allen art exhibit, video content, dp/editor
+            </li>
+          </ul>
+        </li>
+        <li class="year-group">
+          <div class="year">
+            2009
+          </div>
+          <ul>
+            <li class="title">
+              WE SHALL REMAIN, TV series preview, PBS, interviews dp
+            </li>
+            <li class="title">
+              HEAT LIGHTNING, short, editor
+            </li>
+            <li class="title">
+              DINNER IMPOSSIBLE, Food Network, camera
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+  </div>
+  <main class="main-container">
+    <nav>
+      <img id='logo' src='./assets/img/logo.webp' />
+      <ul class="nav-items">
+        <li><a href="#video">Cinematographer Reel</a></li>
+        <li>Editor Reel</li>
+        <li class="menu-toggle-nav">Credits</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <!-- <div class="lightbox" id="video">
+			<div style="top:0; left: 0; position:absolute; z-index: 999; height:fit-content; width:fit-content; scale: 0.75;"><iframe style="width:100vw;height:100vh;" src="https://player.vimeo.com/video/700066483?h=70814f6679&autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+			<p class="close"><a href="#" title="Close This Video Lightbox">Close <span>X</span></a></p>
+		</div> -->
+    <header>
+      <div class="container">
+        <div class="content">
+          <h1>David Aubrey</h1>
+          <p class="body-large-strong">
+            Director, DP, Editor
+          </p>
+          <p id="description" class="body-large">
+            A career for over forty years in feature, documentary, television, educational, commercial, promotional, art
+            and music films.
+          </p>
+        </div>
       </div>
-    </div>
-  </body>
+    </header>
+    <section id="stories">
+      <div class="container">
+        <h1>Telling a World of Stories</h1>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src='./assets/img/gallery/equador.webp'/>
+            </div>
+            <div class="swiper-slide">
+              <img src='./assets/img/gallery/hands.webp'/>
+            </div>
+            <div class="swiper-slide">
+              <img src='./assets/img/gallery/editing_suite.webp'/>
+            </div>
+            <div class="swiper-slide">
+              <img id='emmy' src='./assets/img/gallery/emmy.webp'/>
+            </div>
+            <div class="swiper-slide">
+              <img src='./assets/img/gallery/paris.webp'/>
+            </div>
+            <div class="swiper-slide">
+              <img src='./assets/img/gallery/oat.webp'/>
+            </div>
+            <div class="swiper-slide">
+              <img src='./assets/img/gallery/not_white_sands.webp'/>
+            </div>
+            <div class="swiper-slide">
+              <img src='./assets/img/gallery/game_on_look.webp'/>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+    <footer>
+      <div>
+        2350 Fox Road, Suite 200 Santa Fe, NM  87507
+      </div>
+      <div>
+        <a href="mailto:dea@lightningwood.com">
+          dea@lightningwood.com
+        </a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const menuToggleNav = document.querySelector('.menu-toggle-nav');
+    const menuToggleClose = document.querySelector('.menu-toggle-close');
+    const container = document.querySelector('.main-container');
+    const scrim = document.querySelector('.scrim');
+    const sidebar = document.querySelector('.sidebar');
+
+    menuToggleNav.addEventListener('click', ()=>{
+      container.classList.toggle('hide-overflow')
+      scrim.classList.toggle('is-active');
+      scrim.classList.toggle('no-pointer');
+      sidebar.classList.toggle('is-active');
+    })
+    menuToggleClose.addEventListener('click', ()=>{
+      container.classList.toggle('hide-overflow')
+      scrim.classList.toggle('is-active');
+      scrim.classList.toggle('no-pointer');
+      sidebar.classList.toggle('is-active');
+    })
+  </script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
+  </script>
+</body>
+
 </html>

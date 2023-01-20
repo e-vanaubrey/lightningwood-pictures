@@ -1,0 +1,26 @@
+/*
+This file is used to contain all layout imports.
+Files inside this folder should contain all styles relating
+to layouts.
+*/
+//Import layout files
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    width: calc(100% - 96px);
+    max-width: $max-width;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: calc(100% - 96px);
+    padding: 12px 48px;
+}

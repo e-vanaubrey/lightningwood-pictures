@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+//Abstracts
+@import "abstracts/__abstracts-dir";
+//Base Styles
+@import "base/__base-dir";
+//Components
+@import "components/__components-dir";
+//Layout
+@import "layouts/__layouts-dir";
+
+
+
+.body-large-strong {
+  font-weight: 600;
+  font-size: 1vw;
+}
+
+.body-large {
+  font-weight: 200;
+  font-size: 1vw;
+}
+
+nav {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  top: 0px;
+  z-index: 99;
+  height: 60px;
+  width: calc(100% - 48px);
+  max-width: $max-width;
+  justify-content: space-between;
+  margin: 24px;
+
+  .nav-items {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    column-gap: 24px;
+    list-style: none;
+    font-weight: 600;
+
+    a {
+      text-decoration: none;
+      transition: all 150ms ease-in-out;
+
+      &:visited {
+        color: inherit;
+      }
+
+      &:hover {
+        color: $text-accent;
+      }
+    }
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+  background: url('../assets/img/lp-cover.webp') no-repeat center center;
+  background-size: cover;
+  padding: 48px;
+
+  .content {
+    position: relative;
+    width: 50%;
+
+    h1 {
+      margin: 0;
+    }
+
+    #description {
+      padding-top: 40px;
+    }
+  }
+}
+
+footer {
+  width: calc(100% - 96px);
+  height: 100px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: $text-primary-inverse;
+}
+
+.hide-overflow{
+  height: 100vh;
+  overflow: hidden;
+}
+.no-pointer{
+  pointer-events: none;
+}
+
+.scrim{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  height:100%;
+  width: 100%;
+  transition: all 500ms ease-in-out;
+
+  &.is-active{
+    opacity: 1;
+  }
+}
+
+.sidebar{
+  position: absolute;
+  top: 0;
+  right: -720px;
+  transform: translateX(720px);
+  height: 100%;
+  overflow: hidden;
+  flex: 1 1 0;
+  width: 720px;
+  max-width: 720px;
+  padding: 2vw;
+  background-color: #FFFFFF;
+  transition: all 500ms ease-in-out;
+
+  &.is-active{
+    transform: translateX(-720px);
+  }
+
+  .close-btn{
+    float:right;
+  }
+
+  .credits-all {
+    position: relative;
+    margin: 0 -1rem;
+    height: 85%;
+    overflow-y: scroll;
+
+    .year-group {
+      display: block;
+      padding-bottom: 24px;
+
+      .year {
+        color: $text-accent;
+      }
+
+      .title{
+        list-style-type: none;
+        margin: 0 -2rem;
+        color: $text-primary-inverse
+      }
+    }
+  }
+}
