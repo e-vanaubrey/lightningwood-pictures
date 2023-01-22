@@ -10,14 +10,13 @@
 @import "layouts/__layouts-dir";
 
 
-
 .body-large-strong {
   font-weight: 600;
-  font-size: 1vw;
+  @include fluid-typography(18,24,300,1500);
 }
 
 .body-large {
-  font-size: 1vw;
+  @include fluid-typography(18,24,300,1500);
 }
 
 nav {
@@ -40,6 +39,14 @@ nav {
     list-style: none;
     font-weight: 600;
 
+    li{
+      cursor: pointer;
+    }
+
+    li:hover {
+      color: $text-accent;
+    }
+
     a {
       color: $text-primary;
       text-decoration: none;
@@ -49,9 +56,7 @@ nav {
         color: inherit;
       }
 
-      &:hover {
-        color: $text-accent;
-      }
+      
     }
   }
 }
