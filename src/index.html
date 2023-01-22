@@ -36,7 +36,7 @@
           </div>
           <ul>
             <li class="title">
-              EVERYWHERE IS A GILA, Sierra Club Rio Grande Chapter, dp/editor            </li>
+              EVERYWHERE IS A GILA, Sierra Club Rio Grande Chapter, dp/editor </li>
             <li class="title">
               GAME ON, short, dp/editor
             </li>
@@ -133,9 +133,11 @@
     </aside>
   </div>
   <main class="main-container">
-    <nav>
-      <img id='logo' src='./assets/img/logo.webp' />
-      <ul class="nav-items">
+    <nav class="nav">
+      <img class="logo" src='./assets/img/logo.webp' />
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      <ul class="menu">
         <li><a href="#video">Cinematographer Reel</a></li>
         <li>Editor Reel</li>
         <li class="menu-toggle-nav">Credits</li>
@@ -166,38 +168,38 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src='./assets/img/gallery/equador.webp'/>
+              <img src='./assets/img/gallery/equador.webp' />
             </div>
             <div class="swiper-slide">
-              <img src='./assets/img/gallery/hands.webp'/>
+              <img src='./assets/img/gallery/hands.webp' />
             </div>
             <div class="swiper-slide">
-              <img src='./assets/img/gallery/editing_suite.webp'/>
+              <img src='./assets/img/gallery/editing_suite.webp' />
             </div>
             <div class="swiper-slide">
-              <img id='emmy' src='./assets/img/gallery/emmy.webp'/>
+              <img id='emmy' src='./assets/img/gallery/emmy.webp' />
             </div>
             <div class="swiper-slide">
-              <img src='./assets/img/gallery/paris.webp'/>
+              <img src='./assets/img/gallery/paris.webp' />
             </div>
             <div class="swiper-slide">
-              <img src='./assets/img/gallery/oat.webp'/>
+              <img src='./assets/img/gallery/oat.webp' />
             </div>
             <div class="swiper-slide">
-              <img src='./assets/img/gallery/not_white_sands.webp'/>
+              <img src='./assets/img/gallery/not_white_sands.webp' />
             </div>
             <div class="swiper-slide">
-              <img src='./assets/img/gallery/game_on_look.webp'/>
+              <img src='./assets/img/gallery/game_on_look.webp' />
             </div>
           </div>
-        </div>
-        <div class="swiper-button-next"></div>
+          <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
+        </div>
       </div>
     </section>
     <footer>
       <div>
-        2350 Fox Road, Suite 200 Santa Fe, NM  87507
+        2350 Fox Road, Suite 200 Santa Fe, NM 87507
       </div>
       <div>
         <a href="mailto:dea@lightningwood.com">
@@ -207,7 +209,7 @@
     </footer>
   </main>
 
-  
+
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
@@ -230,21 +232,21 @@
     const scrim = document.querySelector('.scrim');
     const sidebar = document.querySelector('.sidebar');
 
-    if(menuToggleNav){
-      menuToggleNav.addEventListener('click', ()=>{
-      container.classList.toggle('hide-overflow')
-      scrim.classList.toggle('is-active');
-      scrim.classList.toggle('no-pointer');
-      sidebar.classList.toggle('is-active');
-    })
+    if (menuToggleNav) {
+      menuToggleNav.addEventListener('click', () => {
+        container.classList.toggle('hide-overflow')
+        scrim.classList.toggle('is-active');
+        scrim.classList.toggle('no-pointer');
+        sidebar.classList.toggle('is-active');
+      })
     }
-    if(menuToggleClose){
-      menuToggleClose.addEventListener('click', ()=>{
-      container.classList.toggle('hide-overflow')
-      scrim.classList.toggle('is-active');
-      scrim.classList.toggle('no-pointer');
-      sidebar.classList.toggle('is-active');
-    })
+    if (menuToggleClose) {
+      menuToggleClose.addEventListener('click', () => {
+        container.classList.toggle('hide-overflow')
+        scrim.classList.toggle('is-active');
+        scrim.classList.toggle('no-pointer');
+        sidebar.classList.toggle('is-active');
+      })
     }
   </script>
 </body>

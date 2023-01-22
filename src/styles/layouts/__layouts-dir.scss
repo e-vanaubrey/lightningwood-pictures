@@ -17,10 +17,34 @@ main{
 }
 
 section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
     width: calc(100% - 96px);
-    padding: 12px 48px;
+
+}
+
+#stories{
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+    width: calc(100% - 96px);
+}
+
+@media (max-width: 48em) {
+    .container{
+        width: calc(100% - 48px);
+        max-width: $max-width;
+    }
+
+    #stories{
+        width: 100%;
+        max-width: $max-width;
+    }
+    
+    footer{
+        width: calc(100% - 48px);
+    }
 }
