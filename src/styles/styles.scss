@@ -52,6 +52,7 @@ nav .menu-btn:hover {
 }
 nav li a{
   text-decoration: none;
+  color:unset;
 }
 
 nav li a:visited{
@@ -206,6 +207,7 @@ header {
 
 footer {
   height: 100px;
+  margin-top: 40px;
   padding-bottom: 40px;
   display: flex;
   justify-content: space-between;

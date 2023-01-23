@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Lightningwood Pictures</title>
   <link rel='stylesheet' href='./styles/styles.scss' />
+  <link rel="preload" fetchpriority="high" as="image" href="./assets/img/lp-cover.webp" type="image/webp">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <script type='text/javascript' src='./script.js'></script>
 </head>
@@ -202,6 +203,9 @@
         2350 Fox Road, Suite 200 Santa Fe, NM 87507
       </div>
       <div>
+      Lightningwood Pictures — All Rights Reserved &copy; <script>document.write(new Date().getFullYear())</script>
+      </div>
+      <div>
         <a href="mailto:dea@lightningwood.com">
           dea@lightningwood.com
         </a>
@@ -216,8 +220,20 @@
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+      // when window width is >= 320px
+        500: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        1020: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
+      },
+      
       loop: true,
       navigation: {
         nextEl: ".swiper-button-next",
