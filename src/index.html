@@ -9,6 +9,8 @@
   <link rel='stylesheet' href='./styles/styles.scss' />
   <link rel="preload" fetchpriority="high" as="image" href="./assets/img/lp-cover.webp" type="image/webp">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./styles/components/glightbox.min.css" />
+  <script src="./glightbox.min.js"></script>
   <script type='text/javascript' src='./script.js'></script>
 </head>
 
@@ -139,8 +141,8 @@
       <input class="menu-btn" type="checkbox" id="menu-btn" />
       <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
       <ul class="menu">
-        <li><a href="#video">Cinematographer Reel</a></li>
-        <li>Editor Reel</li>
+        <li><a href="https://vimeo.com/700065496" class="glightbox1">Cinematographer Reel</a></li>
+        <li><a href="https://vimeo.com/700066483" class="glightbox2">Editor Reel</a></li>
         <li class="menu-toggle-nav">Credits</li>
         <li>Contact</li>
       </ul>
@@ -214,6 +216,37 @@
   </main>
 
 
+  <script type="text/javascript">
+  var lightboxVideo1 = GLightbox({
+                selector: '.glightbox1',
+                videosWidth:'75%'
+            });
+            var lightboxVideo2 = GLightbox({
+                selector: '.glightbox2',
+                videosWidth:'75%'
+            });
+
+            if (player) {
+                    if (!player.ready) {
+                        // If player is not ready
+                        player.on('ready', (event) => {
+                            // Do something when video is ready
+                        });
+                    }
+
+                    player.on('play', (event) => {
+                        console.log('Started play');
+                    });
+
+                    player.on('volumechange', (event) => {
+                        console.log('Volume change');
+                    });
+
+                    player.on('ended', (event) => {
+                        console.log('Video ended');
+                    });
+                }
+  </script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 

@@ -285,3 +285,11 @@ footer {
     }
   }
 }
+
+.plyr__control--overlaid{
+  background: $text-accent;
+}
+
+.plyr--full-ui input[type=range]{
+  color: $text-accent
+}
