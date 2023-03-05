@@ -11,13 +11,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./styles/components/glightbox.min.css" />
   <script src="./glightbox.min.js"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+
   <script type='text/javascript' src='./script.js'></script>
 </head>
 
 <body>
   <div class="scrim no-pointer">
-    <aside class="sidebar">
-      <button class="close-btn menu-toggle-close">Close</button>
+    <aside class="sidebar credits">
+      <button class="close-btn credits-menu-toggle-close menu-toggle-close">Close</button>
       <h3>Selected Credits</h3>
       <ul class="credits-all">
         <li class="year-group">
@@ -134,6 +138,14 @@
         </li>
       </ul>
     </aside>
+    <aside class="sidebar contact">
+      <button class="close-btn contact-menu-toggle-close menu-toggle-close">Close</button>
+      <h3>Contact</h3>
+      <div id='map'></div>
+      <p>Lightningwood Pictures</p>
+      <p>2350 Fox Road, Ste 200</p>
+      <p>Santa Fe, NM 87507</p>
+    </aside>
   </div>
   <main class="main-container">
     <nav class="nav">
@@ -143,8 +155,8 @@
       <ul class="menu">
         <li><a href="https://vimeo.com/700065496" class="glightbox1">Cinematographer Reel</a></li>
         <li><a href="https://vimeo.com/700066483" class="glightbox2">Editor Reel</a></li>
-        <li class="menu-toggle-nav">Credits</li>
-        <li>Contact</li>
+        <li class="credits-menu-toggle-nav">Credits</li>
+        <li class="contact-menu-toggle-nav">Contact</li>
       </ul>
     </nav>
     <!-- <div class="lightbox" id="video">
@@ -275,29 +287,67 @@
     });
   </script>
   <script>
-    const menuToggleNav = document.querySelector('.menu-toggle-nav');
-    const menuToggleClose = document.querySelector('.menu-toggle-close');
+    const contactMenuToggleNav = document.querySelector('.contact-menu-toggle-nav');
+    const creditsMenuToggleNav = document.querySelector('.credits-menu-toggle-nav');
+    const creditsMenuToggleClose = document.querySelector('.credits-menu-toggle-close');
+    const contactMenuToggleClose = document.querySelector('.contact-menu-toggle-close');
     const container = document.querySelector('.main-container');
     const scrim = document.querySelector('.scrim');
-    const sidebar = document.querySelector('.sidebar');
+    const contactSidebar = document.querySelector('.contact');
+    const creditsSidebar = document.querySelector('.credits');
 
-    if (menuToggleNav) {
-      menuToggleNav.addEventListener('click', () => {
+
+    if (contactMenuToggleNav) {
+      contactMenuToggleNav.addEventListener('click', () => {
         container.classList.toggle('hide-overflow')
         scrim.classList.toggle('is-active');
         scrim.classList.toggle('no-pointer');
-        sidebar.classList.toggle('is-active');
+        contactSidebar.classList.toggle('is-active');
+
+        map.resize();
       })
     }
-    if (menuToggleClose) {
-      menuToggleClose.addEventListener('click', () => {
+
+    if (contactMenuToggleClose) {
+      contactMenuToggleClose.addEventListener('click', () => {
         container.classList.toggle('hide-overflow')
         scrim.classList.toggle('is-active');
         scrim.classList.toggle('no-pointer');
-        sidebar.classList.toggle('is-active');
+        contactSidebar.classList.toggle('is-active');
       })
     }
+
+    if (creditsMenuToggleNav) {
+      creditsMenuToggleNav.addEventListener('click', () => {
+        container.classList.toggle('hide-overflow')
+        scrim.classList.toggle('is-active');
+        scrim.classList.toggle('no-pointer');
+        creditsSidebar.classList.toggle('is-active');
+      })
+    }
+
+    if (creditsMenuToggleClose) {
+      creditsMenuToggleClose.addEventListener('click', () => {
+        container.classList.toggle('hide-overflow')
+        scrim.classList.toggle('is-active');
+        scrim.classList.toggle('no-pointer');
+        creditsSidebar.classList.toggle('is-active');
+      })
+    }
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZXZhbmF1YnJleSIsImEiOiJjbGV2ejkweGoxNXlwM3lxb2g0ZDdicmJiIn0.gDdlkRS9gURK9FDn1OsdRg';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/evanaubrey/clevzb8o5000z01l4d8ka931e',
+      center: [-106.00411620016847, 35.65490431173326], // starting position [lng, lat]
+      zoom: 14 // starting zoom
+    });
+
+    const marker = new mapboxgl.Marker({ color: 'black' })
+    .setLngLat([-106.00411620016847, 35.65490431173326])
+    .addTo(map);
   </script>
+
 </body>
 
 </html>
