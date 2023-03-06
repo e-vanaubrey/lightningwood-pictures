@@ -22,6 +22,16 @@ p {
     @include fluid-typography(16,25,400,1500);
 }
 
+a {
+    font-weight: 500;
+    color: $text-accent;
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
 #stories{
     h1{
         color: $text-primary-inverse;

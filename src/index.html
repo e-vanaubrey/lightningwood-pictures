@@ -145,10 +145,19 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="200" y1="56" x2="56" y2="200" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line><line x1="200" y1="200" x2="56" y2="56" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line></svg>
       </button>
       <h3>Contact</h3>
-      <div id='map'></div>
-      <p>Lightningwood Pictures</p>
-      <p>2350 Fox Road, Ste 200</p>
-      <p>Santa Fe, NM 87507</p>
+      <div id="location">
+        <h4>Location</h4>
+        <div id='map'></div>
+        <p>Lightningwood Pictures</p>
+        <p>2350 Fox Road, Ste 200</p>
+        <p>Santa Fe, NM 87507</p>
+        <a href="https://goo.gl/maps/LecUAx6E4CfyMBS87" target="_blank" rel="noreferrer noopener">Get Directions</a>
+      </div>
+      <div id="inquiries">
+        <h4>Inquiries</h4>
+        <a href="mailto:dea@lightningwood.com" target="_blank" rel="noreferrer noopener">dea@lightningwood.com</a>
+        <a href="tel:15056901632">505 690 1632</a>
+      </div>
     </aside>
   </div>
   <main class="main-container">
@@ -347,7 +356,7 @@
       zoom: 14 // starting zoom
     });
 
-    const marker = new mapboxgl.Marker({ color: 'black' })
+    const marker = new mapboxgl.Marker({ color: '#F58319' })
     .setLngLat([-106.00411620016847, 35.65490431173326])
     .addTo(map);
   </script>
