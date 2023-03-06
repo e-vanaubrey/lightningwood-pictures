@@ -224,7 +224,7 @@ footer {
 }
 
 .scrim{
-  display: none;
+  overflow: hidden;
   opacity: 0;
   position: absolute;
   top: 0;
@@ -258,10 +258,14 @@ footer {
 
   &.is-active{
     transform: translateX(-720px);
+    transition: all 500ms ease-in-out;
   }
 
   .close-btn{
+    cursor: pointer;
     float:right;
+    background: transparent;
+    border: transparent;
   }
 
   h3{
@@ -311,4 +315,17 @@ footer {
 
 .glightbox-container .ginner-container.gvideo-container {
  align-items: center;
+}
+
+.swipe-btn{
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 999px !important;
+  background-color: #FFF !important;
+  color:#000 !important;
+
+  &:after{
+    font-size: 20px;
+    font-weight: bold;
+  }
 }

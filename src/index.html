@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Lightningwood Pictures</title>
-  <link rel='stylesheet' href='./styles/styles.scss' />
   <link rel="preload" fetchpriority="high" as="image" href="./assets/img/lp-cover.webp" type="image/webp">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./styles/components/glightbox.min.css" />
   <script src="./glightbox.min.js"></script>
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel='stylesheet' href='./styles/styles.scss' />
 
 
   <script type='text/javascript' src='./script.js'></script>
@@ -21,7 +21,9 @@
 <body>
   <div class="scrim no-pointer">
     <aside class="sidebar credits">
-      <button class="close-btn credits-menu-toggle-close menu-toggle-close">Close</button>
+      <button class="close-btn credits-menu-toggle-close menu-toggle-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="200" y1="56" x2="56" y2="200" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line><line x1="200" y1="200" x2="56" y2="56" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line></svg>
+      </button>
       <h3>Selected Credits</h3>
       <ul class="credits-all">
         <li class="year-group">
@@ -139,7 +141,9 @@
       </ul>
     </aside>
     <aside class="sidebar contact">
-      <button class="close-btn contact-menu-toggle-close menu-toggle-close">Close</button>
+      <button class="close-btn contact-menu-toggle-close menu-toggle-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="200" y1="56" x2="56" y2="200" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line><line x1="200" y1="200" x2="56" y2="56" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line></svg>
+      </button>
       <h3>Contact</h3>
       <div id='map'></div>
       <p>Lightningwood Pictures</p>
@@ -207,8 +211,8 @@
               <img src='./assets/img/gallery/game_on_look.webp' />
             </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next swipe-btn"></div>
+          <div class="swiper-button-prev swipe-btn"></div>
         </div>
       </div>
     </section>
