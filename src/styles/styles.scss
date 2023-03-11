@@ -68,6 +68,7 @@ nav .logo {
   float: left;
 }
 
+
 @media (max-width: 48em) {
   .logo{
     width: 200px;
@@ -151,7 +152,7 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 
 /* 48em = 768px */
 
-@media (min-width: 48em) {
+@include min-width(medium)  {
   nav{
     padding: 0 48px;
     height: 80px;
@@ -210,13 +211,23 @@ header {
 }
 
 footer {
+  @include fluid-typography(14,16,300,1500);
+
   height: 100px;
   margin-top: 40px;
   padding-bottom: 40px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
   color: $text-primary-inverse;
+  text-align: center;
+
+  @include min-width(large) {
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+  }
 }
 
 .hide-overflow{
