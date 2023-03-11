@@ -2,17 +2,19 @@
     font-family: "Inter";
     font-weight: 400;
     src: url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
-    
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Inter";
     font-weight: 600;
     src: url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Woodward";
     font-weight: 400;
     src: url("../assets/fonts/Woodward-Regular.woff") format("woff");
+    font-display: swap;
 }
