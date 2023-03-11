@@ -14,9 +14,10 @@ h1 {
 h3 {
     font-family: $woodward;
     font-weight: 400;
-    font-size: 3vw;
+    @include fluid-typography(32,60,400,1500);
     color: $text-primary-inverse;
 }
+
 
 p {
     @include fluid-typography(16,25,400,1500);
