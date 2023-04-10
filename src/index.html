@@ -30,6 +30,7 @@
 
 <body>
   <div class="scrim no-pointer">
+    <div class="scrim-btn no-pointer"></div>
     <aside class="sidebar credits">
       <button class="close-btn credits-menu-toggle-close menu-toggle-close">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="200" y1="56" x2="56" y2="200" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line><line x1="200" y1="200" x2="56" y2="56" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line></svg>
@@ -434,6 +435,8 @@
     const contactMenuToggleClose = document.querySelector('.contact-menu-toggle-close');
     const container = document.querySelector('.main-container');
     const scrim = document.querySelector('.scrim');
+    const scrimBtn = document.querySelector('.scrim-btn');
+
     const contactSidebar = document.querySelector('.contact');
     const creditsSidebar = document.querySelector('.credits');
 
@@ -443,6 +446,7 @@
         container.classList.toggle('hide-overflow')
         scrim.classList.toggle('is-active');
         scrim.classList.toggle('no-pointer');
+        scrimBtn.classList.toggle('no-pointer');
         contactSidebar.classList.toggle('is-active');
 
         map.resize();
@@ -454,6 +458,7 @@
         container.classList.toggle('hide-overflow')
         scrim.classList.toggle('is-active');
         scrim.classList.toggle('no-pointer');
+        scrimBtn.classList.toggle('no-pointer');
         contactSidebar.classList.toggle('is-active');
       })
     }
@@ -463,6 +468,7 @@
         container.classList.toggle('hide-overflow')
         scrim.classList.toggle('is-active');
         scrim.classList.toggle('no-pointer');
+        scrimBtn.classList.toggle('no-pointer');
         creditsSidebar.classList.toggle('is-active');
       })
     }
@@ -472,9 +478,28 @@
         container.classList.toggle('hide-overflow')
         scrim.classList.toggle('is-active');
         scrim.classList.toggle('no-pointer');
+        scrimBtn.classList.toggle('no-pointer');
         creditsSidebar.classList.toggle('is-active');
       })
     }
+
+
+    if (scrimBtn ) {
+      scrimBtn.addEventListener('click', () => {
+      if(contactSidebar.classList.contains('is-active')){
+        contactSidebar.classList.toggle('is-active');
+      }
+      if(creditsSidebar.classList.contains('is-active')){
+        creditsSidebar.classList.toggle('is-active');
+      }
+      console.log('click!')
+      container.classList.toggle('hide-overflow')
+      scrim.classList.toggle('is-active');
+      scrim.classList.toggle('no-pointer');
+      scrimBtn.classList.toggle('no-pointer');
+    }) 
+    }
+
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiZXZhbmF1YnJleSIsImEiOiJjbGV2ejkweGoxNXlwM3lxb2g0ZDdicmJiIn0.gDdlkRS9gURK9FDn1OsdRg';
     var map = new mapboxgl.Map({

@@ -246,7 +246,6 @@ footer {
   top: 0;
   left: 0;
   z-index: 999;
-  background-color: rgba($color: #000000, $alpha: 0.8);
   height:100%;
   width: 100%;
   transition: all 500ms ease-in-out;
@@ -257,8 +256,20 @@ footer {
   }
 }
 
+.scrim-btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  height:100%;
+  width: 100%;
+  transition: all 500ms ease-in-out;
+}
+
 .sidebar{
   position: absolute;
+  z-index: 2;
   top: 0;
   right: -720px;
   transform: translateX(720px);
@@ -267,7 +278,7 @@ footer {
   flex: 1 1 0;
   width: 100%;
   max-width: 720px;
-  padding: 24px;
+  padding-top: 24px;
   background-color: #FFFFFF;
   color: #000000;
   transition: all 500ms ease-in-out;
@@ -294,6 +305,7 @@ footer {
   }
 
   .close-btn{
+    padding-right: 24px;
     cursor: pointer;
     float:right;
     background: transparent;
@@ -302,10 +314,11 @@ footer {
 
   h3{
     margin-bottom: 2rem;
+    padding-left: 24px;
   }
 
   ul{
-    padding: 0;
+    padding: 0 24px 24px;
     list-style: none;
   }
 
@@ -340,6 +353,10 @@ footer {
       }
     }
   }
+
+  #location{
+    padding: 0 24px
+  }
   #map{
     width:100%;
     height: 300px;
@@ -354,6 +371,7 @@ footer {
   }
 
   #inquiries{
+    padding: 0 24px;
     a{
       display: block;
     }
