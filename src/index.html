@@ -15,7 +15,6 @@
   <link rel="icon" href="./assets/img/favicon.ico" sizes="any">
   <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
 
-
   <link rel="preload" fetchpriority="high" as="image" href="./assets/img/lp-cover.webp" type="image/webp">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./styles/components/glightbox.min.css" />
@@ -23,9 +22,6 @@
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
   <link rel='stylesheet' href='./styles/styles.scss' />
-
-
-  <script type='text/javascript' src='./script.js'></script>
 </head>
 
 <body>
@@ -379,27 +375,6 @@
                 selector: '.glightbox2',
                 videosWidth:'75%'
             });
-
-            if (player) {
-                    if (!player.ready) {
-                        // If player is not ready
-                        player.on('ready', (event) => {
-                            // Do something when video is ready
-                        });
-                    }
-
-                    player.on('play', (event) => {
-                        console.log('Started play');
-                    });
-
-                    player.on('volumechange', (event) => {
-                        console.log('Volume change');
-                    });
-
-                    player.on('ended', (event) => {
-                        console.log('Video ended');
-                    });
-                }
   </script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
